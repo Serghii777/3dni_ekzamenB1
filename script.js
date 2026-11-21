@@ -1,4 +1,4 @@
-/* Налаштування: вставте справжнє платіжне посилання замість порожнього рядка. */
+/* Посилання на VIP-оплату Softbook. */
 const VIP_PAYMENT_URL = "https://iramelnyk91gmailcom.lms.softbook.app/shop/item/13858";
 const TIMER_KEY = 'b1_december_2026_countdown_end';
 const TIMER_DURATION = 5 * 60 * 1000;
@@ -33,7 +33,6 @@ const vip = document.querySelector('#vip-register');
 if(vip){
   if(VIP_PAYMENT_URL && /^https:\/\//i.test(VIP_PAYMENT_URL)){
     vip.href = VIP_PAYMENT_URL;
-    document.querySelector('#vip-hint').textContent='Безпечний перехід на сторінку оплати';
     vip.addEventListener('click',()=>{
       if(typeof fbq === 'function') fbq('track','InitiateCheckout',{value:19,currency:'PLN',content_name:'B1 December VIP'});
     });
