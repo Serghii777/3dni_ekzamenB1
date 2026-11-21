@@ -1,17 +1,10 @@
 /* Посилання на VIP-оплату Softbook. */
 const VIP_PAYMENT_URL = "https://iramelnyk91gmailcom.lms.softbook.app/shop/item/13858";
-const TIMER_KEY = 'b1_december_2026_countdown_end';
+// Новий відлік 5 хвилин при кожному відкритті або оновленні сторінки.
+// Нічого не записуємо у localStorage чи cookies.
 const TIMER_DURATION = 5 * 60 * 1000;
+const endTime = Date.now() + TIMER_DURATION;
 
-function getEndTime(){
-  let saved;
-  try { saved = Number(localStorage.getItem(TIMER_KEY)); } catch(e) {}
-  if (Number.isFinite(saved) && saved > 0) return saved;
-  const end = Date.now() + TIMER_DURATION;
-  try { localStorage.setItem(TIMER_KEY, String(end)); } catch(e) {}
-  return end;
-}
-const endTime = getEndTime();
 function updateCountdown(){
   const remaining = Math.max(0, Math.ceil((endTime - Date.now()) / 1000));
   const mins = String(Math.floor(remaining/60)).padStart(2,'0');
