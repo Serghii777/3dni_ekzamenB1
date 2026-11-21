@@ -49,3 +49,41 @@ body{margin:0;background:#eee5e2;color:var(--ink);font-family:Manrope,Arial,sans
 .trainer-notice{margin:0 auto 22px;padding:17px 15px;border:1.5px solid #e9a5b2;border-radius:16px;background:#fff1f3;box-shadow:0 6px 20px #a60c2912;text-align:center}
 .trainer-notice strong{display:block;color:#a60c29;font-size:17px;line-height:1.3;font-weight:800;margin-bottom:7px}
 .trainer-notice p{margin:0;color:#53343e;font-size:13px;font-weight:700;line-height:1.55}
+
+/* V9: компактний головний екран, без зміни тарифів чи подяки. */
+body[data-page="home"] .hero { min-height: 0; padding-top: 13px; padding-bottom: 11px; }
+body[data-page="home"] .date-pill { padding: 7px 16px; font-size: 19px; }
+body[data-page="home"] .online { margin-top: 9px; font-size: 9px; }
+body[data-page="home"] .free-badge { margin-top: 7px; padding: 6px 14px; font-size: 9px; }
+body[data-page="home"] .headline { margin-top: 14px; }
+body[data-page="home"] .headline-main { font-size: clamp(66px, 16vw, 78px); line-height: .8; }
+body[data-page="home"] .headline h1 { font-size: clamp(40px, 10.5vw, 51px); margin-top: 10px; line-height: .88; }
+body[data-page="home"] .cta { min-height: 58px; margin-top: 17px; padding: 11px 15px; }
+body[data-page="home"] .portrait-area { height: clamp(165px, 25dvh, 230px); min-height: 165px; margin-top: 0; }
+body[data-page="home"] .portrait-glow { height: 200px; width: 240px; }
+body[data-page="home"] .speaker-name { font-size: 27px; }
+body[data-page="home"] .speaker-credentials p { margin: 3px 0 6px; font-size: 10px; }
+body[data-page="home"] .credential-grid > div { padding: 7px 6px 6px; }
+body[data-page="home"] .credential-grid strong { font-size: 19px; }
+body[data-page="home"] .countdown-box { margin-top: 8px; padding: 7px 12px; }
+body[data-page="home"] .timer { font-size: 24px; }
+body[data-page="home"] .legal-footer { padding: 8px 10px 9px; }
+body[data-page="home"] .legal-footer nav { gap: 5px 8px; }
+body[data-page="home"] .legal-footer a { font-size: 8px; }
+body[data-page="home"] .legal-footer p { margin-top: 5px; font-size: 7.5px; }
+@media (min-width:451px) {
+  body[data-page="home"] { padding: 8px 0; }
+  body[data-page="home"] .page { min-height: calc(100dvh - 16px); }
+}
+@media (max-width: 370px) {
+  body[data-page="home"] .headline-main { font-size: 62px; }
+  body[data-page="home"] .headline h1 { font-size: 39px; }
+  body[data-page="home"] .portrait-area { height: 175px; min-height: 175px; }
+}
+@media (max-height: 710px) {
+ body[data-page="home"] .headline { margin-top: 8px; }
+ body[data-page="home"] .headline-main { font-size: 64px; }
+ body[data-page="home"] .headline h1 { font-size: 40px; }
+ body[data-page="home"] .cta { margin-top: 12px; min-height: 53px; }
+ body[data-page="home"] .portrait-area { height: 155px; min-height: 155px; }
+}
