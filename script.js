@@ -1,5 +1,5 @@
 /* Налаштування: вставте справжнє платіжне посилання замість порожнього рядка. */
-const VIP_PAYMENT_URL = "";
+const VIP_PAYMENT_URL = "https://iramelnyk91gmailcom.lms.softbook.app/shop/item/13858";
 const TIMER_KEY = 'b1_december_2026_countdown_end';
 const TIMER_DURATION = 5 * 60 * 1000;
 
